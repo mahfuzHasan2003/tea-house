@@ -6,6 +6,14 @@
     <title>Tea House</title>
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Customise Tailwind -->
     <script>
       tailwind.config = {
         theme: {
@@ -15,6 +23,10 @@
             },
             backgroundImage: {
               grad_primary: "linear-gradient(to right, #FF8938, #FF0000);",
+              grad_footer: "linear-gradient(to right, #FF89381a, #FF00001a)",
+            },
+            fontFamily: {
+              Manrope: ["Manrope", "sans-serif"],
             },
           },
         },
@@ -26,9 +38,9 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body class="font-Manrope">
     <header
-      class="md:container mx-auto flex flex-col md:flex-row md:items-center gap-10 p-3 md:p-0"
+      class="md:container mx-auto flex flex-col lg:flex-row lg:items-center gap-10 p-3 xl:p-0"
     >
       <!-- left side -->
       <div class="space-y-5 flex-1">
@@ -48,7 +60,7 @@
         </button>
       </div>
       <!-- right side -->
-      <div class="ml-auto relative">
+      <div class="lg:ml-auto relative flex-1">
         <img src="./images/banner.png" alt="" />
         <!-- rattings -->
         <div
@@ -64,7 +76,7 @@
         </div>
       </div>
     </header>
-    <main class="p-3 md:p-0">
+    <main class="p-3 xl:p-0">
       <!-- Featured Products -->
       <section class="container mx-auto mt-5">
         <!-- featured description -->
@@ -114,7 +126,7 @@
 
       <!-- Great Tea  -->
       <section
-        class="container mx-auto mt-10 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-20"
+        class="container mx-auto mt-10 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-20"
       >
         <!-- Image part -->
         <div class="grid grid-rows-3 grid-cols-2 gap-5">
@@ -159,12 +171,12 @@
 
       <!-- Meet Client -->
       <section
-        class="container mx-auto mt-10 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-5 p-4 md:p-16 bg-grad_primary rounded-md text-white relative"
+        class="container mx-auto mt-10 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-14 p-4 lg:p-16 bg-grad_primary rounded-md text-white relative"
       >
         <img
-          src="./images/cup.png"
+          src="./images/bg_cup.png"
           alt=""
-          class="absolute bottom-0 w-1/6 left-[10%] opacity-5 hidden md:block"
+          class="absolute bottom-0 w-1/6 left-[10%] hidden md:block"
         />
         <!-- Desription  -->
         <div class="self-center space-y-3 md:w-4/5">
@@ -258,7 +270,7 @@
         <div
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-10 mt-5 md:mt-10"
         >
-          <div class="space-y-2 border rounded-md p-5 md:p-10">
+          <div class="space-y-2 border rounded-md p-5 lg:p-10">
             <img src="./images/news-1.png" alt="" />
             <p class="text-slate-500">Feb 05, 2027</p>
             <h6 class="text-xl font-bold">Collecting 8 points for discount</h6>
@@ -267,7 +279,7 @@
             </p>
             <a href="#" class="font-bold">Learn More</a>
           </div>
-          <div class="space-y-2 border rounded-md p-5 md:p-10">
+          <div class="space-y-2 border rounded-md p-5 lg:p-10">
             <img src="./images/news-2.png" alt="" />
             <p class="text-slate-500">Feb 05, 2027</p>
             <h6 class="text-xl font-bold">Collecting 8 points for discount</h6>
@@ -276,7 +288,7 @@
             </p>
             <a href="#" class="font-bold">Learn More</a>
           </div>
-          <div class="space-y-2 border rounded-md p-5 md:p-10">
+          <div class="space-y-2 border rounded-md p-5 lg:p-10">
             <img src="./images/news-3.png" alt="" />
             <p class="text-slate-500">Feb 05, 2027</p>
             <h6 class="text-xl font-bold">Collecting 8 points for discount</h6>
@@ -285,7 +297,7 @@
             </p>
             <a href="#" class="font-bold">Learn More</a>
           </div>
-          <div class="space-y-2 border rounded-md p-5 md:p-10">
+          <div class="space-y-2 border rounded-md p-5 lg:p-10">
             <img src="./images/news-1.png" alt="" />
             <p class="text-slate-500">Feb 05, 2027</p>
             <h6 class="text-xl font-bold">Collecting 8 points for discount</h6>
@@ -299,8 +311,110 @@
     </main>
 
     <!-- Footer -->
-    <footer></footer>
-    <!-- margin top -->
-    <section class="mt-40"></section>
+    <footer class="bg-grad_footer p-10 lg:p-24 mt-10 lg:mt-20">
+      <div class="container mx-auto">
+        <!-- get started -->
+        <div
+          class="md:flex md:flex-row md:justify-between space-y-5 mb-5 md:mb-20"
+        >
+          <img src="./images/cup.png" alt="" />
+          <div class="flex items-center gap-1 md:gap-3">
+            <p class="text-lg">Ready to get strated?</p>
+            <button
+              class="bg-grad_primary text-white font-semibold px-7 py-4 rounded-md"
+            >
+              Get Started
+            </button>
+          </div>
+        </div>
+        <!-- Links -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-10"
+        >
+          <!-- Quick Links -->
+          <div class="space-y-1 md:space-y-2">
+            <h4 class="font-bold text-xl">Quick Links</h4>
+            <p><a href="#" class="hover:underline text-slate-600">Home</a></p>
+            <p>
+              <a href="#" class="hover:underline text-slate-600">About Us</a>
+            </p>
+            <p>
+              <a href="#" class="hover:underline text-slate-600">Insurance</a>
+            </p>
+            <p>
+              <a href="#" class="hover:underline text-slate-600"
+                >Privacy Policy</a
+              >
+            </p>
+          </div>
+          <!-- Our Services -->
+          <div class="space-y-1 md:space-y-2">
+            <h4 class="font-bold text-xl">Our Services</h4>
+            <p>
+              <a href="#" class="hover:underline text-slate-600"
+                >Life Insurance</a
+              >
+            </p>
+            <p>
+              <a href="#" class="hover:underline text-slate-600"
+                >Car Insurance</a
+              >
+            </p>
+            <p>
+              <a href="#" class="hover:underline text-slate-600"
+                >Health Insurance</a
+              >
+            </p>
+            <p>
+              <a href="#" class="hover:underline text-slate-600"
+                >House Insurance</a
+              >
+            </p>
+          </div>
+          <!-- Help -->
+          <div class="space-y-1 md:space-y-2">
+            <h4 class="font-bold text-xl">Help</h4>
+            <p><a href="#" class="hover:underline text-slate-600">FAQs</a></p>
+            <p>
+              <a href="#" class="hover:underline text-slate-600">Contact Us</a>
+            </p>
+          </div>
+          <!-- Subscribe Newsletter -->
+          <div class="space-y-5">
+            <h4 class="font-bold text-xl">Subscribe to our newsletter</h4>
+            <form action="" class="flex gap-3">
+              <input
+                placeholder="Email Address"
+                type="text"
+                class="bg-transparent border-b-2 border-slate-600 outline-none placeholder-slate-600 py-1"
+              />
+              <button>
+                <i
+                  class="fa-solid fa-chevron-right text-white bg-grad_primary p-3 rounded-full w-10 h-10"
+                ></i>
+              </button>
+            </form>
+            <div class="flex gap-3">
+              <a href="#"
+                ><i class="fa-brands fa-facebook fa-2xl text-slate-700"></i
+              ></a>
+              <a href="#"
+                ><i
+                  class="fa-brands fa-square-instagram fa-2xl text-slate-700"
+                ></i
+              ></a>
+              <a href="#"
+                ><i
+                  class="fa-brands fa-square-twitter fa-2xl text-slate-700"
+                ></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <p class="mt-10 lg:mt-20 md:text-center">
+          © 2027 UIDesign.to - All rights reserved.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
