@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Tea House</title>
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -19,6 +20,7 @@
         },
       };
     </script>
+    <!-- Font awesome -->
     <script
       src="https://kit.fontawesome.com/b7eaa77b2e.js"
       crossorigin="anonymous"
@@ -26,11 +28,11 @@
   </head>
   <body>
     <header
-      class="container flex items-center mx-auto flex-col md:flex-row gap-10 p-5 md:p-0"
+      class="md:container mx-auto flex flex-col md:flex-row md:items-center gap-10 p-3 md:p-0"
     >
       <!-- left side -->
-      <div class="space-y-5">
-        <h1 class="text-7xl font-bold">
+      <div class="space-y-5 flex-1">
+        <h1 class="text-5xl md:text-7xl font-bold">
           It's good <br />
           tea time at <br />
           The Tea House
@@ -62,12 +64,12 @@
         </div>
       </div>
     </header>
-    <main class="p-5 md:p-0">
+    <main class="p-3 md:p-0">
       <!-- Featured Products -->
       <section class="container mx-auto mt-5">
         <!-- featured description -->
         <div class="md:w-3/5 mx-auto md:text-center space-y-5">
-          <h1 class="text-4xl font-bold">Our Featured Products</h1>
+          <h1 class="text-3xl md:text-4xl font-bold">Our Featured Products</h1>
           <p class="text-gray-600">
             There are many variations of passages of Lorem Ipsum available, but
             the majority have suffered alteration in some form, by injected
@@ -76,7 +78,9 @@
           </p>
         </div>
         <!-- featured images -->
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-20 mt-10">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-20 mt-10"
+        >
           <div
             class="bg-gradient-to-b from-[#F4F4F4] to-[#f4f4f400] text-center p-5 space-y-1 rounded-md"
           >
@@ -107,9 +111,10 @@
           </div>
         </div>
       </section>
+
       <!-- Great Tea  -->
       <section
-        class="container mx-auto mt-20 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-20"
+        class="container mx-auto mt-10 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-20"
       >
         <!-- Image part -->
         <div class="grid grid-rows-3 grid-cols-2 gap-5">
@@ -128,7 +133,7 @@
         </div>
         <!-- Description part -->
         <div class="space-y-3 self-center">
-          <h1 class="text-4xl font-bold">
+          <h1 class="text-3xl md:text-4xl font-bold">
             Great Tea, Freshly <br />
             Presented
           </h1>
@@ -151,13 +156,19 @@
           </p>
         </div>
       </section>
+
       <!-- Meet Client -->
       <section
-        class="container mx-auto mt-20 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-20 p-5 md:p-16 bg-grad_primary rounded-md text-white"
+        class="container mx-auto mt-10 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-5 p-4 md:p-16 bg-grad_primary rounded-md text-white relative"
       >
+        <img
+          src="./images/cup.png"
+          alt=""
+          class="absolute bottom-0 w-1/6 left-[10%] opacity-5 hidden md:block"
+        />
         <!-- Desription  -->
-        <div class="self-center space-y-3">
-          <h1 class="text-4xl font-bold">Meet Our Super Clients</h1>
+        <div class="self-center space-y-3 md:w-4/5">
+          <h1 class="text-3xl md:text-4xl font-bold">Meet Our Super Clients</h1>
           <p class="text-slate-200">
             There are many variations of passages of Lorem Ipsum available, but
             the majority have suffered alteration in some form, by injected
@@ -171,12 +182,125 @@
           </button>
         </div>
         <!-- Card part -->
-        <div class=""></div>
+        <div class="space-y-10 md:space-y-20 relative">
+          <!-- top card -->
+          <div class="absolute z-10 top-[38%] shadow-md md:w-4/5">
+            <div class="relative">
+              <div class="p-4 pt-10 md:p-10 bg-slate-50 text-black rounded-md">
+                <img
+                  src="./images/client.png"
+                  alt=""
+                  class="absolute left-0 md:left-[-30px] top-[-30px] border-white border-2 rounded-full"
+                />
+                <p class="mb-3 md:mb-5 text-slate-600">
+                  We are providing the best and suitable home insurance services
+                  for the people who are interested to treatment
+                </p>
+                <h5 class="font-semibold">Ilham Yuda</h5>
+                <p>Businessman</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- bottom card top -->
+          <div class="relative opacity-25 -right-6 md:-right-16">
+            <div
+              class="p-4 pt-10 md:p-10 bg-slate-50 text-black rounded-md md:w-4/5"
+            >
+              <img
+                src="./images/client.png"
+                alt=""
+                class="absolute left-0 md:left-[-30px] top-[-30px] border-white border-2 rounded-full"
+              />
+              <p class="mb-3 md:mb-5 text-slate-600">
+                We are providing the best and suitable home insurance services
+                for the people who are interested to treatment
+              </p>
+              <h5 class="font-semibold">Ilham Yuda</h5>
+              <p>Businessman</p>
+            </div>
+          </div>
+
+          <!-- bottom card down -->
+          <div class="relative opacity-25 -right-6 md:-right-16">
+            <div
+              class="p-4 pt-10 md:p-10 bg-slate-50 text-black rounded-md md:w-4/5"
+            >
+              <img
+                src="./images/client.png"
+                alt=""
+                class="absolute left-0 md:left-[-30px] top-[-30px] border-white border-2 rounded-full"
+              />
+              <p class="mb-3 md:mb-5 text-slate-600">
+                We are providing the best and suitable home insurance services
+                for the people who are interested to treatment
+              </p>
+              <h5 class="font-semibold">Ilham Yuda</h5>
+              <p>Businessman</p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <!-- margin top -->
-      <section class="mt-40"></section>
+      <!-- News and Event -->
+      <section class="container mx-auto mt-10 md:mt-20">
+        <!-- News Description -->
+        <div class="md:w-3/5 mx-auto md:text-center space-y-5">
+          <h1 class="text-3xl md:text-4xl font-bold">News & Events</h1>
+          <p class="text-gray-600">
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form, by injected
+            humour, or randomised words which don't look even slightly
+            believable.
+          </p>
+        </div>
+        <!-- Events -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-10 mt-5 md:mt-10"
+        >
+          <div class="space-y-2 border rounded-md p-5 md:p-10">
+            <img src="./images/news-1.png" alt="" />
+            <p class="text-slate-500">Feb 05, 2027</p>
+            <h6 class="text-xl font-bold">Collecting 8 points for discount</h6>
+            <p class="text-gray-600">
+              There are many variations of passages of Lorem Ipsum available.
+            </p>
+            <a href="#" class="font-bold">Learn More</a>
+          </div>
+          <div class="space-y-2 border rounded-md p-5 md:p-10">
+            <img src="./images/news-2.png" alt="" />
+            <p class="text-slate-500">Feb 05, 2027</p>
+            <h6 class="text-xl font-bold">Collecting 8 points for discount</h6>
+            <p class="text-gray-600">
+              There are many variations of passages of Lorem Ipsum available.
+            </p>
+            <a href="#" class="font-bold">Learn More</a>
+          </div>
+          <div class="space-y-2 border rounded-md p-5 md:p-10">
+            <img src="./images/news-3.png" alt="" />
+            <p class="text-slate-500">Feb 05, 2027</p>
+            <h6 class="text-xl font-bold">Collecting 8 points for discount</h6>
+            <p class="text-gray-600">
+              There are many variations of passages of Lorem Ipsum available.
+            </p>
+            <a href="#" class="font-bold">Learn More</a>
+          </div>
+          <div class="space-y-2 border rounded-md p-5 md:p-10">
+            <img src="./images/news-1.png" alt="" />
+            <p class="text-slate-500">Feb 05, 2027</p>
+            <h6 class="text-xl font-bold">Collecting 8 points for discount</h6>
+            <p class="text-gray-600">
+              There are many variations of passages of Lorem Ipsum available.
+            </p>
+            <a href="#" class="font-bold">Learn More</a>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <!-- Footer -->
     <footer></footer>
+    <!-- margin top -->
+    <section class="mt-40"></section>
   </body>
 </html>
